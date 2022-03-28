@@ -45,3 +45,4 @@ Run the game:
 ```sh
 python app/game.py
 ```
+
