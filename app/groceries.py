@@ -1,15 +1,13 @@
 
 # READ INVENTORY OF PRODUCTS
 
-#products_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
-#products_df = read_csv(products_filepath)
-#products = products_df.to_dict("records")
 
 import os
 
 from app.utils import to_usd
 
 simple_path = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
+default_path = os.path.join(os.path.dirname(__file__), "..", "data", "default_products.csv")
 
 ## checks to see if a products.csv file exists. If not, it uses the default
 if os.path.isfile(simple_path) == True:
@@ -18,7 +16,7 @@ if os.path.isfile(simple_path) == True:
 
 else:
     print("USING DEFAULT PRODUCTS CSV FILE...")
-    csv_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "default_products.csv")
+    csv_filepath = default_path
 
 
 from pandas import read_csv

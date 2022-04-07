@@ -16,7 +16,8 @@ pandas
 #sendgrid==6.6.0 # this version may be older than current docs
 
 # dataviz:
-#plotly
+plotly
+#plotly.express
 #kaleido # for chart exports
 
 # quality control / code mgmt:
