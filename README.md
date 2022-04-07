@@ -72,3 +72,9 @@ python -m app.unemployment
 ```
 
 ## Run Tests
+
+to run test:
+
+```sh
+pytest
+```

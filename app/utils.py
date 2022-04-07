@@ -2,8 +2,11 @@
 #moved from groceries file
 def to_usd(my_price):
     """
-    This function was designed to format values to
-    a U.S. currency, rounded to two decimal places.
+    This function was designed to format numerical values
+    to a U.S. currency, rounded to the nearest cent.
+
+    This function accepts intergers, float, or complex data types.
+    It will return a string data type.
     
     Example of invoking the function.
 
@@ -30,3 +33,15 @@ if __name__ == "__main__":
     print (to_usd(float(price)))
 
 
+   #"""
+   #This is a docstring. It tells us what this function is about.
+   #What its responsibilities are.
+   #What the parameters are about.
+   #What datatypes the parameters are.
+   #What this function will return.
+   #Example of invoking the function.
+
+   #Invoke like this: to_usd(9.9999)
+
+   #Example return value "$10,00"
+   #"""
