@@ -65,4 +65,10 @@ Run the crypto report:
 python -m app.crypto
 ```
 
+Run the unemployment report:
+
+```sh
+python -m app.unemployment
+```
+
 ## Run Tests
