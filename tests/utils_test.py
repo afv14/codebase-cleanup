@@ -12,3 +12,4 @@ def test_to_usd():
 
     #if large number, should you thousands separator:
     assert to_usd(123456789.98) == "$123,456,789.98"
+
