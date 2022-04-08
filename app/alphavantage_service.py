@@ -87,5 +87,4 @@ def fetch_unemployment_data():
     url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={ALPHAVANTAGE_API_KEY}"
     response = requests.get(url)
     parsed_response = json.loads(response.text)
-
     return parsed_response
