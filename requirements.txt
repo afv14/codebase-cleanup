@@ -17,7 +17,7 @@ pandas
 
 # dataviz:
 plotly
-#plotly.express
+plotly.express
 #kaleido # for chart exports
 
 # quality control / code mgmt:
