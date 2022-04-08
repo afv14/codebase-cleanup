@@ -4,9 +4,6 @@ print("UNEMPLOYMENT REPORT...")
 
 
 import os
-import json
-from dotenv import load_dotenv
-import requests
 from app.alphavantage_service import fetch_unemployment_data
 
 load_dotenv()
