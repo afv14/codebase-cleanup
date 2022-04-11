@@ -4,12 +4,9 @@ print("UNEMPLOYMENT REPORT...")
 
 
 import os
-import json
-from dotenv import load_dotenv
-import requests
+
 from app.alphavantage_service import fetch_unemployment_data
 
-load_dotenv()
 
 parsed_response = fetch_unemployment_data()
 
@@ -31,7 +28,14 @@ from plotly.express import bar
 df = DataFrame(data)
 print(df.head())
 
-fig = bar(df, x="date", y="value", title="Unemployment Rates")
+# new column as float version of original strings column
+df["unemployment_rate"] = df["value"].astype(float)
+
+# remove original column to clean up
+df.drop(columns=["value"], inplace=True)
+
+
+fig = bar(df, x="date", y="unemployment_rate", title="Unemployment Rates")
 # https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html
 
 # https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html#plotly.graph_objects.Figure.update_yaxes
@@ -40,7 +44,12 @@ fig = bar(df, x="date", y="value", title="Unemployment Rates")
 fig.update_yaxes(
     #tickprefix="$",
     ticksuffix="%",
-    showgrid=True
+    showgrid=True,
+    title_text="Unemployment Rates"
+)
+
+fig.update_xaxes(
+    title_text="Dates"
 )
 
 fig.show()
