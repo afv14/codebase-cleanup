@@ -4,7 +4,9 @@ print("UNEMPLOYMENT REPORT...")
 
 
 import os
+
 from app.alphavantage_service import fetch_unemployment_data
+
 
 parsed_response = fetch_unemployment_data()
 

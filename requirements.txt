@@ -17,6 +17,7 @@ pandas
 
 # dataviz:
 plotly
+
 plotly.express
 #kaleido # for chart exports
 
